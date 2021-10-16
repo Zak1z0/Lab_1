@@ -10,12 +10,24 @@ namespace _8
     {
         static void Main(string[] args)
         {
-            int x, s;
-            string num;
-            Console.Write("Введите x "); num = Console.ReadLine(); x = Convert.ToInt32(num);
-            Console.WriteLine("Вычеслим 3 * x^4 – 5 * х^3 + 2 * х^2 – x + 7");
-            s = 3 * x^4 - 5 * x^3 + 2 *  x^2 - x + 7;
-            Console.WriteLine("Ответ равен " + s);
+            int x,s;
+            string str;
+            Console.Write("Введите x: "); str = Console.ReadLine(); x = Convert.ToInt32(str);
+            if (x <= 0)
+            {
+                while (x <= 0)
+                {
+                    Console.Write("x не может быть меньше или равен 0 " + "Введите снова: ");
+                    str = Console.ReadLine(); x = Convert.ToInt32(str);
+
+                }
+            }
+            else 
+            {
+                s = (((3 * x - 5) * x + 2) * x - 1) * x + 7;
+            }
+            s = (((3 * x - 5) * x + 2) * x - 1) * x + 7;
+            Console.WriteLine("Ответ: " + s);
         }
     }
 }
